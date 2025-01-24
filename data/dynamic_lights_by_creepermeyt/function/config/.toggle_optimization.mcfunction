@@ -1,5 +1,6 @@
 scoreboard players add - dynbclevel 1
 execute if score - dynbclevel matches 2 run scoreboard players set - dynbclevel -1
+execute if score p dynbclevel matches 0 unless score s dynbclevel matches 1 run scoreboard players set p dynbclevel 1
 
 function dynamic_lights_by_creepermeyt:config/rconfig
 

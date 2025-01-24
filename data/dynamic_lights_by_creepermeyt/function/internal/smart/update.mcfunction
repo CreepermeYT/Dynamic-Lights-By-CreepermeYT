@@ -9,6 +9,7 @@ function dynamic_lights_by_creepermeyt:internal/smart/attempttogen with entity @
 
 execute unless block ~ ~ ~ light run tag @s add failed
 execute if entity @s[tag=!failed] run return 1
+execute if entity @s[tag=secondary] run return 0
 
 scoreboard players remove @s dynbclevel 1
 

@@ -1,4 +1,4 @@
-execute if entity @s[tag=!secondary] if block ~ ~1 ~ water if block ~ ~ ~ light[waterlogged=false] run setblock ~ ~ ~ air
+execute if block ~ ~1 ~ water if block ~ ~ ~ light[waterlogged=false] run setblock ~ ~ ~ air
 $execute if score @s dynbclevel matches $(level) if block ~ ~ ~ light run return 0
 
 
