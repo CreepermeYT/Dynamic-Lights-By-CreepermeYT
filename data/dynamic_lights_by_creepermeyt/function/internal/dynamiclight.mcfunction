@@ -1,3 +1,2 @@
-execute align xyz unless entity @n[type=marker,tag=dynbc,distance=..0.1] run summon minecraft:marker ~ ~ ~ {Tags:["dynbc"],data:{dyn:0},CustomName:'"DynamicLightByCreepermeYT"'}
-$execute align xyz as @n[type=marker,tag=dynbc,distance=..0.1] if score 0 dynbclevel matches $(level) run scoreboard players set @s dynbclevel $(level)
-$execute align xyz as @n[type=marker,tag=dynbc,distance=..0.1] unless score @s dynbclevel matches $(level).. run scoreboard players set @s dynbclevel $(level)
+## this function generates a dynamic light at the position the function is being run, with a light level from the nbt argument "level" 
+$function dynamic_lights_by_creepermeyt:internal/common/dynamiclight {level:$(level)}

@@ -1,0 +1,2 @@
+execute unless score p dynbclevel matches 2 run function dynamic_lights_by_creepermeyt:internal/optimized/tickupdate
+execute if score p dynbclevel matches 2 run function dynamic_lights_by_creepermeyt:internal/smart/tickupdate

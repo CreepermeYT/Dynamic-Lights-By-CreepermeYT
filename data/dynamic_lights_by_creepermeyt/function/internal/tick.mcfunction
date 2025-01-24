@@ -19,10 +19,10 @@ execute if score g dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepe
 execute if score s dynbclevel matches 1 at @e[type=glow_squid] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:10}
 
 ## items
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/genforlvl {level:15}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/genforlvl {level:14}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/genforlvl {level:10}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/genforlvl {level:7}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:15}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:14}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:10}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:7}
 #Torches only
 execute if score - dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepermeyt:mainhand_torch] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:14}
 execute if score - dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepermeyt:offhand_torch] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:14}
@@ -35,7 +35,7 @@ execute unless score - dynbclevel matches -2 run function dynamic_lights_by_cree
 ###################################
 ## Generation/Deletion of Lights ##
 ###################################
-execute as @e[type=marker,tag=dynbc] at @s run function dynamic_lights_by_creepermeyt:internal/markersgen with entity @s data
+function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
 
 ## reschedule tick
