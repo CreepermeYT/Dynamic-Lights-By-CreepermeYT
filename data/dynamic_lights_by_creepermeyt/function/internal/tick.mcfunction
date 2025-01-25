@@ -7,26 +7,24 @@ execute as @e[type=marker,tag=dynbc] run scoreboard players set @s dynbclevel 0
 ###########################################################
 
 ## entities on fire - only if they are close to a player
-execute if score f dynbclevel matches 1 as @e[predicate=dynamic_lights_by_creepermeyt:on_fire] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
+execute if score f dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:on_fire] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
 
-## max of 16 tnt
-execute if score t dynbclevel matches 1 at @e[type=tnt,sort=random,limit=16] unless entity @s[nbt={fuse:1s}] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
+## max of 48 tnt - only if they are close to a player
+execute if score t dynbclevel matches 1 as @e[type=tnt,sort=random,limit=48] unless entity @s[nbt={fuse:1s}] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
 
-## glowing effect for players
-execute if score g dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepermeyt:is_glowing] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:10}
+## glowing effect - only if they are close to a player
+execute if score g dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:is_glowing] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:10}
 
-## glow squids :3
+## glow squids :3 - only if they are close to a player
 execute if score s dynbclevel matches 1 at @e[type=glow_squid] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:10}
 
 ## items
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:15}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:14}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:10}
-execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {level:7}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_15",level:15}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_14",level:14}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_10",level:10}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_7",level:7}
 #Torches only
-execute if score - dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepermeyt:mainhand_torch] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:14}
-execute if score - dynbclevel matches 1 as @a[predicate=dynamic_lights_by_creepermeyt:offhand_torch] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:14}
-execute if score - dynbclevel matches 1 as @e[type=item,predicate=dynamic_lights_by_creepermeyt:item_torch] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:14}
+execute if score - dynbclevel matches 1 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"torch",level:14}
 
 ## compatibility
 execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
