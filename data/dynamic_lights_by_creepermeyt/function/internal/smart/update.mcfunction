@@ -1,6 +1,6 @@
 tag @s remove new
 
-execute if score @s dynbclevel matches 0 run tag @s add delete
+execute unless score @s dynbclevel matches 1..15 run tag @s add delete
 execute if entity @s[tag=delete] run function dynamic_lights_by_creepermeyt:internal/smart/eraselights
 execute if entity @s[tag=delete] run kill @s
 execute if entity @s[tag=delete] run return 1
