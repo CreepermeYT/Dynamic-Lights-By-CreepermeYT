@@ -32,5 +32,9 @@ execute if entity @s[tag=profile2] run scoreboard players set s dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set p dynbclevel 2
 tag @s remove profile2
 
+execute if function dynamic_lights_by_creepermeyt:config/1.21/versioncheck run scoreboard players set v dynbclevel -1210
+execute if function dynamic_lights_by_creepermeyt:config/1.21.5/versioncheck run scoreboard players set v dynbclevel -1215
+execute unless score v dynbclevel matches ..0 run scoreboard players set v dynbclevel -1
+
 function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config
