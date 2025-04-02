@@ -29,6 +29,8 @@ execute if score - dynbclevel matches 1 run function dynamic_lights_by_creeperme
 ## compatibility
 execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
 
+# Check if OVERLOADED
+function dynamic_lights_by_creepermeyt:internal/common/overloadcheck
 
 ###################################
 ## Generation/Deletion of Lights ##

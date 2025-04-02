@@ -1,1 +1,1 @@
-execute as @e[type=marker,tag=dynbc] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/markersgen with entity @s data
+execute as @e[type=marker,tag=dynbc,limit=65535] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/markersgen with entity @s data
