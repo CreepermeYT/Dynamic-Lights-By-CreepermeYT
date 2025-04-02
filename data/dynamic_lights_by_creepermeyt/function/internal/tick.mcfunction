@@ -1,3 +1,5 @@
+## reschedule tick
+execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
 ## set dynamic light markers to 0
 execute as @e[type=marker,tag=dynbc] run scoreboard players set @s dynbclevel 0
 
@@ -38,6 +40,5 @@ function dynamic_lights_by_creepermeyt:internal/common/overloadcheck
 function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
 
-## reschedule tick
-execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
+##complete uninstallation
 execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbclevel
