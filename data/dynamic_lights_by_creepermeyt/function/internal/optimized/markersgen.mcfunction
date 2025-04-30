@@ -1,4 +1,5 @@
 execute if score @s dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/optimized/eraselights
+execute if entity @s[tag=successfulerase] run tp @s ~ -128 ~
 execute if entity @s[tag=successfulerase] run kill @s
 execute if entity @s[tag=successfulerase] run return 1
 
