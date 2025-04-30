@@ -7,7 +7,7 @@ tellraw @a ""
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
-tellraw @a ""
+tellraw @a {"text":"                                                         v1.3.3","bold":true,"color":"yellow"}
 tellraw @a {"text":"-----------------------------------------------------","color":"yellow"}
 tellraw @a "                 -------------------------------"
 tellraw @a [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
