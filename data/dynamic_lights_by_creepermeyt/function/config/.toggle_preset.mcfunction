@@ -30,9 +30,11 @@ execute if entity @s[tag=profile2] run scoreboard players set g dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set s dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set p dynbclevel 2
 
-execute if function dynamic_lights_by_creepermeyt:config/1.21/versioncheck run scoreboard players set v dynbclevel -1210
-execute if function dynamic_lights_by_creepermeyt:config/1.21.5/versioncheck run scoreboard players set v dynbclevel -1215
-execute unless score v dynbclevel matches ..0 run scoreboard players set v dynbclevel -1
+scoreboard players reset v dynbclevel
+summon armor_stand ~ ~ ~ {Tags:['dynbc.versioncheck'],HandItems:[{id:"minecraft:dirt"}],equipment:{mainhand:{id:"minecraft:dirt"}}}
+execute if data entity @n[tag=dynbc.versioncheck] HandItems[0] run scoreboard players set v dynbclevel -1210
+execute if data entity @n[tag=dynbc.versioncheck] equipment.mainhand run scoreboard players set v dynbclevel -1215
+kill @e[tag=dynbc.versioncheck]
 
 function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config/presets

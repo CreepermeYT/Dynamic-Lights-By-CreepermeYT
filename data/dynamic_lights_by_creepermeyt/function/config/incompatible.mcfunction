@@ -1,4 +1,4 @@
-say Dynamic Lights by CreepermeYT is designed for 1.21 to 1.21.5 ONLY!
+say Dynamic Lights by CreepermeYT v1.3.4 is designed for 1.21 to 1.21.5 ONLY!
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
