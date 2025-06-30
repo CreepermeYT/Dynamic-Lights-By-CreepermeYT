@@ -5,7 +5,7 @@ execute if score p dynbclevel matches 0 if score t dynbclevel matches 1 run scor
 function dynamic_lights_by_creepermeyt:config/rconfig
 
 tellraw @s "-- Previous Action: ------------------------------------"
-execute if score t dynbclevel matches 0 run tellraw @s [{"text":"Disabled ","color":"white","bold":true},{"text":"lit ","color":"gray","bold":false},{"text":"TNT","color":"red"}]
-execute if score t dynbclevel matches 1 run tellraw @s [{"text":"Enabled ","color":"white","bold":true},{"text":"lit ","color":"gray","bold":false},{"text":"TNT","color":"red"}]
+execute if score t dynbclevel matches 0 run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Disabled ","color":"red"},{"text":"lit ","color":"gray","bold":false},{"text":"TNT","color":"red"}]
+execute if score t dynbclevel matches 1 run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Enabled ","color":"green"},{"text":"lit ","color":"gray","bold":false},{"text":"TNT","color":"red"}]
 tellraw @s "-----------------------------------------------------"
 

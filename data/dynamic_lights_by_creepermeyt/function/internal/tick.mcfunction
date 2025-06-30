@@ -3,6 +3,8 @@ execute unless score - dynbclevel matches -2 run schedule function dynamic_light
 ## set dynamic light markers to 0
 execute as @e[type=marker,tag=dynbc] run scoreboard players set @s dynbclevel 0
 
+## menus 1.21.6
+execute unless score - dynbclevel matches -2 if score v dynbclevel matches ..-1216 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/1.21.6/openmenus
 
 ###########################################################
 ## Add Items, Entities, Effects, Compatibility to Marker ##
@@ -25,13 +27,13 @@ execute if score - dynbclevel matches 0 run function dynamic_lights_by_creeperme
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_14",level:14}
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_10",level:10}
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_7",level:7}
-#Torches only
+## Torches only
 execute if score - dynbclevel matches 1 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"torch",level:14}
 
 ## compatibility
 execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
 
-# Check if OVERLOADED
+## Check if OVERLOADED
 function dynamic_lights_by_creepermeyt:internal/common/overloadcheck
 
 ###################################
@@ -40,5 +42,6 @@ function dynamic_lights_by_creepermeyt:internal/common/overloadcheck
 function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
 
-##complete uninstallation
+## complete uninstallation
+execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbcmenus
 execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbclevel

@@ -1,2 +1,1 @@
-execute if score v dynbclevel matches -1215 run function dynamic_lights_by_creepermeyt:config/1.21.5/load
-execute if score v dynbclevel matches -1210 run function dynamic_lights_by_creepermeyt:config/1.21/load
+tellraw @a [{"text":"-> ","bold":true},{"text":"LOADED","color":"green"},{"text":": ","color":"gray"},"","","",{"text":" < "},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >  ",{"text":" v1.3.4","color":"dark_gray","bold":false}]
