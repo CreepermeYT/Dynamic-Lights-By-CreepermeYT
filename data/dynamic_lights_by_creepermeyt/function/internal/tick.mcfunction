@@ -11,7 +11,7 @@ execute unless score - dynbclevel matches -2 if score v dynbclevel matches ..-12
 ###########################################################
 
 ## entities on fire - only if they are close to a player
-execute if score f dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:on_fire] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
+execute if score f dynbclevel matches 1 at @e[type=!marker,predicate=dynamic_lights_by_creepermeyt:on_fire] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
 
 ## max of 48 tnt - only if they are close to a player
 execute if score t dynbclevel matches 1 as @e[type=tnt,sort=random,limit=48] unless entity @s[nbt={fuse:1s}] at @s unless block ~ ~1 ~ moving_piston unless block ~ ~1 ~ tnt if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight {level:15}
