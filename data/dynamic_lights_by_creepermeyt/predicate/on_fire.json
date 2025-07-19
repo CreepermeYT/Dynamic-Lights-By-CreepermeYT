@@ -1,9 +1,31 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "flags": {
-      "is_on_fire": true
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": [
+            "minecraft:item_frame",
+            "minecraft:marker",
+            "minecraft:interaction",
+            "minecraft:block_display",
+            "minecraft:item_display",
+            "minecraft:text_display"
+          ]
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_on_fire": true
+        }
+      }
     }
-  }
+  ]
 }
