@@ -2,6 +2,7 @@
 execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
 ## set dynamic light markers to 0
 execute as @e[type=marker,tag=dynbc] run scoreboard players set @s dynbclevel 0
+tag @e[type=marker,tag=dynbc] add dynbc.delete
 
 ## menus 1.21.6
 execute unless score - dynbclevel matches -2 if score v dynbclevel matches ..-1216 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/1.21.6/openmenus
