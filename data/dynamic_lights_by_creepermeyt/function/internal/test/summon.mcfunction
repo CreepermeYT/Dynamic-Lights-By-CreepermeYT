@@ -4,8 +4,8 @@ execute align xyz as @e[type=marker,tag=dynbc,distance=...1] run function dynami
 
 execute unless score c dynbclevel matches 1 run return 1
 
-execute align xyz run summon minecraft:marker ~ ~ ~ {Tags:[dynbc,dynbc.new,dynbc.update]}
-execute as @e[tag=dynbc.new] store result score @s dynbclevel run scoreboard players get s dynbclevel
-tag @e[tag=dynbc.new] remove dynbc.new
+execute align xyz run summon minecraft:marker ~ ~ ~ {Tags:[dynbc,dynbc.new,dynbc.update],CustomName:'"DynamicLightByCreepermeYT"'}
+execute as @e[type=marker,tag=dynbc.new] store result score @s dynbclevel run scoreboard players get s dynbclevel
+tag @e[type=marker,tag=dynbc.new] remove dynbc.new
 
 scoreboard players reset c dynbclevel
