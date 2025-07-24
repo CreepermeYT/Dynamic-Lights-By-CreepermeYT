@@ -27,6 +27,7 @@ execute if score - dynbclevel matches 0 run function dynamic_lights_by_creeperme
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_14",level:14}
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_10",level:10}
 execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_7",level:7}
+execute if score - dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"lightlvl_5",level:5}
 ## Torches only
 execute if score - dynbclevel matches 1 run function dynamic_lights_by_creepermeyt:internal/common/genforlvl {item:"torch",level:14}
 
