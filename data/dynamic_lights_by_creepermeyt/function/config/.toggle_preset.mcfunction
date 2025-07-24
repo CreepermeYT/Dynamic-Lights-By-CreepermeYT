@@ -1,6 +1,6 @@
 execute if score p dynbclevel matches 0 run tag @s add profile1
 execute if score p dynbclevel matches 1 run tag @s add profile2
-execute if score p dynbclevel matches 2 run tag @s add profile3
+execute if score p dynbclevel matches 2 run tag @s add profile0
 execute if score p dynbclevel matches 3 run tag @s add profile0
 
 function dynamic_lights_by_creepermeyt:config/.uninstall

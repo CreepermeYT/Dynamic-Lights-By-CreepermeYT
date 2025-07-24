@@ -1,0 +1,12 @@
+function dynamic_lights_by_creepermeyt:internal/smart/delete
+
+tag @s add dynbc.empty
+execute if entity @s[tag=dynbc.waterabove] run tag @s remove dynbc.empty
+execute if entity @s[tag=dynbc.empty] unless block ~ ~ ~ #air unless block ~ ~ ~ water[level=0] run tag @s remove dynbc.empty
+execute if entity @s[tag=!dynbc.secondary,tag=!dynbc.empty] run function dynamic_lights_by_creepermeyt:internal/smart/propagate
+execute if entity @s[tag=!dynbc.empty] run return 1
+
+execute if score @s dynbclevel matches 9..15 run function dynamic_lights_by_creepermeyt:internal/smart/create_high
+execute if score @s dynbclevel matches ..8 run function dynamic_lights_by_creepermeyt:internal/smart/create_low
+tag @s remove dynbc.empty
+tag @s remove dynbc.update
