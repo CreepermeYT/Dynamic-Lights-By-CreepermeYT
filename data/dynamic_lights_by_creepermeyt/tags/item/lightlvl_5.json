@@ -2,8 +2,7 @@
   "values": [
     "minecraft:amethyst_cluster",
     "minecraft:trial_spawner",
-    "minecraft:sculk_catalyst",
-    "minecraft:magma_block",
-    "minecraft:firefly_bush"
+    "minecraft:vault",
+    "minecraft:magma_block"
   ]
 }
