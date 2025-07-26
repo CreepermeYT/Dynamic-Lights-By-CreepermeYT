@@ -12,8 +12,8 @@ execute unless score p dynbclevel matches 0.. run scoreboard players set p dynbc
 #version check
 function dynamic_lights_by_creepermeyt:internal/common/versioncheck
 
-execute unless score v dynbclevel matches -1216..-1210 run function dynamic_lights_by_creepermeyt:config/incompatible
-execute unless score v dynbclevel matches -1216..-1210 run return 0
+execute unless score v dynbclevel matches -1216..-1205 run function dynamic_lights_by_creepermeyt:config/incompatible
+execute unless score v dynbclevel matches -1216..-1205 run return 0
 
 function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config/load

@@ -11,7 +11,7 @@ tellraw @a ""
 tellraw @a ""
 tellraw @a {"text":"-----------------------------------------------------","color":"dark_red"}
 tellraw @a "                 -------------------------------"
-tellraw @a [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >    ",{"text":" v1.3.4","color":"dark_gray","bold":false}]
+tellraw @a [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >     ",{"text":"  v1.4","color":"dark_gray","bold":false}]
 tellraw @a "                 -------------------------------"
 tellraw @a ""
 tellraw @a [{"text":"               < ","color":"dark_red","bold":true},{"text":"INCOMPATIBLE MC VERSION","color":"red"}," >"]
