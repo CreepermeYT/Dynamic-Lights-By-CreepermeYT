@@ -1,0 +1,1 @@
+function dynamic_lights_by_creepermeyt:internal/smart/summon
