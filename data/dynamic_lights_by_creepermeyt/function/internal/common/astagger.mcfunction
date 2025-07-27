@@ -1,4 +1,4 @@
-execute if predicate dynamic_lights_by_creepermeyt:mainhand_torch run tag @e[tag=dynbc.gettinglvl] add dynbc.itemtorch
+execute if predicate dynamic_lights_by_creepermeyt:mainhand_torch run tag @e[tag=dynbc.gettinglvl] add dynbc.torch
 
 execute if predicate dynamic_lights_by_creepermeyt:mainhand_lightlvl_15 run scoreboard players set @e[tag=dynbc.gettinglvl] dynbclevel 15
 

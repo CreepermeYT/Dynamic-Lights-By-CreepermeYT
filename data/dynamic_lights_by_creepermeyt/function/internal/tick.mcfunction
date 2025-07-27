@@ -1,5 +1,6 @@
 ## reschedule tick
 execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
+execute if score - dynbclevel matches -2 run schedule clear dynamic_lights_by_creepermeyt:internal/tick
 ## mark dynamic light markers for deletion
 tag @e[type=marker,tag=dynbc] add dynbc.delete
 
@@ -33,7 +34,9 @@ execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] run function d
 execute if entity @e[type=item,tag=!dynbc.haslvl] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
 execute as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/common/asitem
 kill @e[tag=dynbc.itemtagger]
-execute as @e[tag=dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
+execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
+execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
+
 
 ## items
 #function dynamic_lights_by_creepermeyt:internal/common/genforlvl
@@ -51,5 +54,8 @@ function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
 
 ## complete uninstallation
+execute if score - dynbclevel matches -2 run tag @e remove dynbc.haslvl
+execute if score - dynbclevel matches -2 run tag @e remove dynbc.torch
+execute if score - dynbclevel matches -2 run tag @e remove dynbc.holder
 execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbcmenus
 execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbclevel
