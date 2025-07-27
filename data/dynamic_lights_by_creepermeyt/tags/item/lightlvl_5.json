@@ -1,8 +1,8 @@
 {
   "values": [
     "minecraft:amethyst_cluster",
-    "minecraft:trial_spawner",
-    "minecraft:vault",
+    {"id":"minecraft:trial_spawner","required":false},
+    {"id":"minecraft:vault","required":false},
     "minecraft:magma_block"
   ]
 }
