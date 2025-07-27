@@ -28,31 +28,12 @@ execute if score s dynbclevel matches 1 at @e[type=glow_squid] if entity @a[dist
 
 ## run as holders of items
 execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] run function dynamic_lights_by_creepermeyt:internal/common/asholder
-scoreboard players set lvl dynbclevel 15
-execute as @e[tag=dynbc.lvl15] at @s anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 14
-execute as @e[tag=dynbc.lvl14] at @s anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 10
-execute as @e[tag=dynbc.lvl10] at @s anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 7
-execute as @e[tag=dynbc.lvl7] at @s anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 5
-execute as @e[tag=dynbc.lvl5] at @s anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## run as items
-summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
+execute if entity @e[type=item,tag=!dynbc.haslvl] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
 execute as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/common/asitem
 kill @e[tag=dynbc.itemtagger]
-scoreboard players set lvl dynbclevel 15
-execute as @e[tag=dynbc.itemlvl15] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 14
-execute as @e[tag=dynbc.itemlvl14] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 10
-execute as @e[tag=dynbc.itemlvl10] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 7
-execute as @e[tag=dynbc.itemlvl7] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight
-scoreboard players set lvl dynbclevel 5
-execute as @e[tag=dynbc.itemlvl5] at @s run function dynamic_lights_by_creepermeyt:internal/dynamiclight
+execute as @e[tag=dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
 
 ## items
 #function dynamic_lights_by_creepermeyt:internal/common/genforlvl
