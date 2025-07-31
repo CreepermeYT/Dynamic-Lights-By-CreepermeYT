@@ -1,7 +1,26 @@
-execute if score v dynbclevel matches -1216 run function dynamic_lights_by_creepermeyt:config/1.21.6/.uninstall
-execute if score v dynbclevel matches -1215 run function dynamic_lights_by_creepermeyt:config/1.21.5/.uninstall
-execute if score v dynbclevel matches -1210..-1205 run function dynamic_lights_by_creepermeyt:config/1.21/.uninstall
+scoreboard players set - dynbclevel -2
+scoreboard players set f dynbclevel 0
+scoreboard players set t dynbclevel 0
+scoreboard players set s dynbclevel 0
+scoreboard players set g dynbclevel 0
+function dynamic_lights_by_creepermeyt:internal/tick
 
-tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
-tellraw @s [{"text":"-> ","bold":true},{"text":"Uninstalled ","color":"red"},{"text":"datapack","color":"white"}]
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
 tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
+tellraw @s "                 -------------------------------"
+tellraw @s [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
+tellraw @s "                 -------------------------------"
+tellraw @s ""
+tellraw @s {"text":"                         [ RELOAD ]","color":"green","bold":true,"clickEvent": {"action": "run_command", "value": "/function dynamic_lights_by_creepermeyt:internal/load"}}
+tellraw @s ""
+
+playsound ui.button.click master @s
