@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Dynamic Lights by CreepermeYT",
+    "description": ["",{"text":"Dynamic Lights","color":"yellow","bold":true}," By ",{"text":"CreepermeYT","color":"white","bold":true}," v1.4"],
     "pack_format": 15,
     "supported_formats": [
       15,
