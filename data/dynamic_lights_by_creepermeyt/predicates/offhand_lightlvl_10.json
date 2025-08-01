@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "offhand": {
-        "items": "#dynamic_lights_by_creepermeyt:lightlvl_10"
+        "tag": "dynamic_lights_by_creepermeyt:lightlvl_10"
       }
     }
   }

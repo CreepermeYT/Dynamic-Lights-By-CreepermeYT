@@ -2,11 +2,12 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "slots": {
-      "weapon.mainhand": {
-        "items": "minecraft:dragon_egg"
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:dragon_egg"
+        ]
       }
     }
   }
 }
-

@@ -2,12 +2,10 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type": "minecraft:item",
-    "slots": {
-      "contents": {
+    "equipment": {
+      "mainhand": {
         "items": "minecraft:torch"
       }
     }
   }
 }
-

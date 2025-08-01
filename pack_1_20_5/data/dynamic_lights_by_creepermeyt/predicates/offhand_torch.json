@@ -2,9 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "slots": {
-      "contents": {
-        "items": "#dynamic_lights_by_creepermeyt:lightlvl_7"
+    "equipment": {
+      "offhand": {
+        "items": "minecraft:torch"
       }
     }
   }

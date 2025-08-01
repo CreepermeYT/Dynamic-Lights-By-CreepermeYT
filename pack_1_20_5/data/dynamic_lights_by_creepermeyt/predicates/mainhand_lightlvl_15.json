@@ -2,8 +2,8 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "slots": {
-      "contents": {
+    "equipment": {
+      "mainhand": {
         "items": "#dynamic_lights_by_creepermeyt:lightlvl_15"
       }
     }
