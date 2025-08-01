@@ -54,8 +54,8 @@ function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
 
 ## complete uninstallation
-execute if score - dynbclevel matches -2 run tag @e remove dynbc.haslvl
-execute if score - dynbclevel matches -2 run tag @e remove dynbc.torch
-execute if score - dynbclevel matches -2 run tag @e remove dynbc.holder
-execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbcmenus
-execute if score - dynbclevel matches -2 run scoreboard objectives remove dynbclevel
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.haslvl
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.torch
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.holder
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbcmenus
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbclevel
