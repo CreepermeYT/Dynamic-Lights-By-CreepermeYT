@@ -10,12 +10,10 @@ execute unless score s dynbclevel matches 0.. run scoreboard players set s dynbc
 execute unless score p dynbclevel matches 0.. run scoreboard players set p dynbclevel 2
 
 #version check
-function dynamic_lights_by_creepermeyt:internal/common/versioncheck
+function dynamic_lights_by_creepermeyt:internal/util/versioncheck
 
 execute unless score v dynbclevel matches -1216..-1205 run function dynamic_lights_by_creepermeyt:config/incompatible
-execute unless score v dynbclevel matches -1216..-1205 run return 0
+execute if score v dynbclevel matches -1216..-1205 run function dynamic_lights_by_creepermeyt:internal/conditional/load_c1
 
-function dynamic_lights_by_creepermeyt:internal/tick
-function dynamic_lights_by_creepermeyt:config/load
 
 ## --- SAME AS .TOGGLE_PRESET.MCFUNCTION --- ###

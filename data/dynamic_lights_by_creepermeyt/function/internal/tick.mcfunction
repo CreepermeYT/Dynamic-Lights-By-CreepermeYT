@@ -28,24 +28,21 @@ scoreboard players set lvl dynbclevel 10
 execute if score s dynbclevel matches 1 at @e[type=glow_squid] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## run as holders of items
-execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] run function dynamic_lights_by_creepermeyt:internal/common/asholder
+execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] run function dynamic_lights_by_creepermeyt:internal/util/asholder
 
 ## run as items
 execute if entity @e[type=item,tag=!dynbc.haslvl] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
-execute as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/common/asitem
+execute as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/util/asitem
 kill @e[tag=dynbc.itemtagger]
-execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
-execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/common/genforentity
-
-
-## items
-#function dynamic_lights_by_creepermeyt:internal/common/genforlvl
+## dropped & held items
+execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
 
 ## compatibility
 execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
 
 ## Check if OVERLOADED
-function dynamic_lights_by_creepermeyt:internal/common/overloadcheck
+function dynamic_lights_by_creepermeyt:internal/util/overloadcheck
 
 ###################################
 ## Generation/Deletion of Lights ##

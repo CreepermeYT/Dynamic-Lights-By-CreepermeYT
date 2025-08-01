@@ -9,9 +9,7 @@ execute if entity @s[tag=dynbc.delete] if score r dynbclevel matches 1 run tag @
 execute if entity @s[tag=dynbc.delete] run tag @s remove dynbc.delete
 
 scoreboard players reset c dynbclevel
-execute unless score lvl dynbclevel matches 0 if score lvl dynbclevel <= @s dynbclevel run return 0
 
-execute unless score r dynbclevel matches 1 run tag @s remove dynbc.secondary
+execute if score lvl dynbclevel > @s dynbclevel run function dynamic_lights_by_creepermeyt:internal/smart/compare_c1
+execute if score lvl dynbclevel matches 0 run function dynamic_lights_by_creepermeyt:internal/smart/compare_c1
 
-tag @s add dynbc.update
-execute store result score @s dynbclevel run scoreboard players get lvl dynbclevel

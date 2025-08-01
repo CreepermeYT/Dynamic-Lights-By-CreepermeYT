@@ -5,8 +5,6 @@ scoreboard players set s dynbclevel 0
 scoreboard players set g dynbclevel 0
 function dynamic_lights_by_creepermeyt:internal/tick
 
-execute if entity @s[tag=dynbc.presetchange] run return 1
-
 tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 tellraw @s "                 -------------------------------"
 tellraw @s [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
