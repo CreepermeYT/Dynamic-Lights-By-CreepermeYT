@@ -51,12 +51,12 @@ function dynamic_lights_by_creepermeyt:internal/common/versioncheck
 
 function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config/presets
-tellraw @s {"text":"-- Previous Action: --","color":"yellow"}
+tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
 execute if entity @s[tag=profile0] run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Switched","color":"yellow"}," to ",{"text":"[FASTEST] ","color":"gray"},{"text":"Preset","color":"gold"}]
 execute if entity @s[tag=profile1] run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Switched","color":"yellow"}," to ",{"text":"[OPTIMIZED] ","color":"gray"},{"text":"Preset","color":"gold"}]
 execute if entity @s[tag=profile2] run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Switched","color":"yellow"}," to ",{"text":"[SMART] ","color":"gray"},{"text":"Preset","color":"gold"}]
 execute if entity @s[tag=profile3] run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Switched","color":"yellow"}," to ",{"text":"[TEST] ","color":"gray"},{"text":"Preset","color":"gold"}]
-
+tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 
 tag @s remove profile0
 tag @s remove profile1

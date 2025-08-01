@@ -10,8 +10,12 @@
   "overlays": {
     "entries": [
       {
+        "directory": "pack_1_20_3",
+        "formats": [26,47]
+      },
+      {
         "directory": "pack_1_20_5",
-        "formats": [41,61]
+        "formats": [41,47]
       },
       {
         "directory": "pack_1_21_5",

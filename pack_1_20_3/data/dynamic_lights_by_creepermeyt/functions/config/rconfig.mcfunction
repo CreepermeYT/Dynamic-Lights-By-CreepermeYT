@@ -1,3 +1,7 @@
+tellraw @s ""
+tellraw @s ""
+tellraw @s ""
+tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 tellraw @s "                 -------------------------------"
 tellraw @s [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
 tellraw @s "                 -------------------------------"

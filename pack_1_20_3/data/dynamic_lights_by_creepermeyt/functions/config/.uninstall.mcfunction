@@ -7,7 +7,7 @@ function dynamic_lights_by_creepermeyt:internal/tick
 
 execute if entity @s[tag=dynbc.presetchange] run return 1
 
-
+tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 tellraw @s "                 -------------------------------"
 tellraw @s [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
 tellraw @s "                 -------------------------------"
@@ -24,8 +24,8 @@ tellraw @s ""
 tellraw @s ""
 tellraw @s {"text":"                         [ RELOAD ]","color":"green","bold":true,"clickEvent": {"action": "run_command", "value": "/function dynamic_lights_by_creepermeyt:internal/load"}}
 tellraw @s ""
-tellraw @s {"text":"-- Previous Action: --","color":"yellow"}
+tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
 tellraw @s [{"text":"-> ","bold":true},{"text":"Uninstalled ","color":"red"},{"text":"datapack","color":"white"}]
-
+tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 
 playsound ui.button.click master @s
