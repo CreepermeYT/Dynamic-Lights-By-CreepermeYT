@@ -18,4 +18,9 @@ execute unless score v dynbclevel matches -1216..-1205 run return 0
 function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config/load
 
+function dynamic_lights_by_creepermeyt:config/presets
+tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
+tellraw @s [{"text":"-> ","bold":true},{"text":"Reloaded ","color":"green"},{"text":"datapack","color":"white"}]
+tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
+
 ## --- SAME AS .TOGGLE_PRESET.MCFUNCTION --- ###
