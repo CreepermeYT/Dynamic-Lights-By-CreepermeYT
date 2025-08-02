@@ -36,7 +36,7 @@
 #-  will make every player with a dragon egg generate a dynamic light level 9 at their position  -#
 #-  (not disabled with a '#' because its an easter egg c:)  -#
 scoreboard players set lvl dynbclevel 9
-execute at @a[predicate=dynamic_lights_by_creepermeyt:mainhand_easteregg] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
+execute at @a[predicate=!dynamic_lights_by_creepermeyt:no_hand_easteregg] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 
 ##  Example 4 :  ##
