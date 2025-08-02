@@ -1,6 +1,3 @@
-tellraw @s ""
-tellraw @s ""
-tellraw @s ""
 tellraw @s {"text":"-----------------------------------------------------","color":"yellow"}
 tellraw @s "                 -------------------------------"
 tellraw @s [{"text":"            < ","bold":true},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >"]
@@ -25,4 +22,5 @@ tellraw @s ""
 tellraw @s {"text":"                     [ BACK TO MENU ]","bold":true,"click_event": {"action": "run_command", "command": "/trigger dynbcmenus set 6"}}
 tellraw @s ""
 
+scoreboard players enable @s dynbcmenus
 playsound ui.button.click master @s

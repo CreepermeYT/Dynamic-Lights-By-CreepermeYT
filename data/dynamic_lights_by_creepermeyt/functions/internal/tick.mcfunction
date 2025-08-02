@@ -5,7 +5,7 @@ execute if score - dynbclevel matches -2 run schedule clear dynamic_lights_by_cr
 tag @e[type=marker,tag=dynbc] add dynbc.delete
 
 ## menus 1.21.6
-execute unless score - dynbclevel matches -2 if score v dynbclevel matches ..-1216 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/openmenus
+execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/openmenus
 
 ###########################################################
 ## Add Items, Entities, Effects, Compatibility to Marker ##

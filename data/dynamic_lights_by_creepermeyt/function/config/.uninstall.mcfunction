@@ -20,7 +20,7 @@ tellraw @s ""
 tellraw @s ["                         ",{"text":"  ","bold":true},{"text":"[ UNINSTALLED ]","bold":true,"color":"dark_gray"}]
 tellraw @s ""
 tellraw @s ""
-tellraw @s {"text":"                         [ RELOAD ]","color":"green","bold":true,"clickEvent": {"action": "run_command", "value": "/function dynamic_lights_by_creepermeyt:internal/load"}}
+tellraw @s {"text":"                         [ RELOAD ]","color":"green","bold":true,"clickEvent": {"action": "run_command", "value": "/function dynamic_lights_by_creepermeyt:config/.reload"}}
 tellraw @s ""
 tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
 tellraw @s [{"text":"-> ","bold":true},{"text":"Uninstalled ","color":"red"},{"text":"datapack","color":"white"}]
