@@ -10,8 +10,8 @@
     "minecraft:sea_lantern",
     "minecraft:shroomlight",
     "minecraft:lava_bucket",
-    "minecraft:ochre_froglight",
-    "minecraft:pearlescent_froglight",
-    "minecraft:verdant_froglight"
+    {"id":"minecraft:ochre_froglight","required":false},
+    {"id":"minecraft:pearlescent_froglight","required":false},
+    {"id":"minecraft:verdant_froglight","required":false}
   ]
 }
