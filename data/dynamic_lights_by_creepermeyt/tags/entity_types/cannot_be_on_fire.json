@@ -2,9 +2,9 @@
   "values": [
     "minecraft:item_frame",
     "minecraft:marker",
-    "minecraft:interaction",
-    "minecraft:block_display",
-    "minecraft:item_display",
-    "minecraft:text_display"
+    {"id":"minecraft:interaction","required":false},
+    {"id":"minecraft:block_display","required":false},
+    {"id":"minecraft:item_display","required":false},
+    {"id":"minecraft:text_display","required":false}
   ]
 }
