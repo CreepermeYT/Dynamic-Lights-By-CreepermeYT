@@ -24,8 +24,12 @@ scoreboard players set lvl dynbclevel 10
 execute if score g dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:is_glowing] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## glow squids :3 - only if they are close to a player
-scoreboard players set lvl dynbclevel 10
-execute if score s dynbclevel matches 1 at @e[type=glow_squid] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
+execute as @e[type=glow_squid,tag=!dynbc.glowsquid] run function dynamic_lights_by_creepermeyt:internal/util/asglowsquid
+execute if score s dynbclevel matches 1 as @e[type=glow_squid,tag=dynbc.glowsquid] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+
+## allays :D - only if they are close to a player
+execute as @e[type=#dynamic_lights_by_creepermeyt:allay,tag=!dynbc.allay] run tag @s add dynbc.allay
+execute if score a dynbclevel matches 1 as @e[type=allay,tag=dynbc.allay] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
 
 ## run as holders of items
 execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] run function dynamic_lights_by_creepermeyt:internal/util/asholder
@@ -37,6 +41,7 @@ kill @e[tag=dynbc.itemtagger]
 ## dropped & held items
 execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
 execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+
 
 ## compatibility
 execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
@@ -54,5 +59,7 @@ function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.haslvl
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.torch
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.holder
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.glowsquid
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.allay
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbcmenus
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbclevel

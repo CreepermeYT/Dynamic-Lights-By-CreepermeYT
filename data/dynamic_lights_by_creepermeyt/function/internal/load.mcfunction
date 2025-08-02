@@ -8,6 +8,7 @@ execute unless score t dynbclevel matches 0.. run scoreboard players set t dynbc
 execute unless score g dynbclevel matches 0.. run scoreboard players set g dynbclevel 1
 execute unless score s dynbclevel matches 0.. run scoreboard players set s dynbclevel 1
 execute unless score p dynbclevel matches 0.. run scoreboard players set p dynbclevel 2
+execute unless score a dynbclevel matches 0.. run scoreboard players set a dynbclevel 1
 
 #version check
 function dynamic_lights_by_creepermeyt:internal/util/versioncheck
