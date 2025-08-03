@@ -9,7 +9,11 @@
         "head": {
           "predicates": {
             "minecraft:enchantments": [
-              {}
+              {
+                  "levels": {
+                    "min": 1
+                  }
+                }
             ]
           }
         }
@@ -27,7 +31,11 @@
         "chest": {
           "predicates": {
             "minecraft:enchantments": [
-              {}
+              {
+                  "levels": {
+                    "min": 1
+                  }
+                }
             ]
           }
         }
@@ -45,7 +53,11 @@
         "legs": {
           "predicates": {
             "minecraft:enchantments": [
-              {}
+              {
+                  "levels": {
+                    "min": 1
+                  }
+                }
             ]
           }
         }
@@ -63,7 +75,11 @@
         "feet": {
           "predicates": {
             "minecraft:enchantments": [
-              {}
+              {
+                  "levels": {
+                    "min": 1
+                  }
+                }
             ]
           }
         }

@@ -9,7 +9,11 @@
           "mainhand": {
             "predicates": {
               "minecraft:enchantments": [
-                {}
+                {
+                  "levels": {
+                    "min": 1
+                  }
+                }
               ]
             }
           }
@@ -27,7 +31,11 @@
           "offhand": {
             "predicates": {
               "minecraft:enchantments": [
-                {}
+                {
+                  "levels": {
+                    "min": 1
+                  }
+                }
               ]
             }
           }
