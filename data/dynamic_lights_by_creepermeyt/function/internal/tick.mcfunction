@@ -36,11 +36,11 @@ scoreboard players set lvl dynbclevel 4
 execute if score e dynbclevel matches 1 as @e[type=#dynamic_lights_by_creepermeyt:can_wear_armor,predicate=!dynamic_lights_by_creepermeyt:no_armor_enchantment] at @s if entity @a[distance=..48] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## run as holders of items
-execute as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] at @s run function dynamic_lights_by_creepermeyt:internal/util/asholder
+execute unless score - dynbclevel matches -2 as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] at @s run function dynamic_lights_by_creepermeyt:internal/util/asholder
 
 ## run as items
 execute if entity @e[type=item,tag=!dynbc.haslvl] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
-execute as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/util/asitem
+execute unless score - dynbclevel matches -2 as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/util/asitem
 kill @e[tag=dynbc.itemtagger]
 ## dropped enchanted items, all dropped & held items
 execute if score e dynbclevel matches 1 as @e[tag=dynbc.enchantment] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
