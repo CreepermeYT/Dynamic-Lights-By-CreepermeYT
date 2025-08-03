@@ -21,6 +21,8 @@ execute if entity @s[tag=profile0] run scoreboard players set t dynbclevel 0
 execute if entity @s[tag=profile0] run scoreboard players set g dynbclevel 0
 execute if entity @s[tag=profile0] run scoreboard players set s dynbclevel 0
 execute if entity @s[tag=profile0] run scoreboard players set p dynbclevel 0
+execute if entity @s[tag=profile0] run scoreboard players set a dynbclevel 0
+execute if entity @s[tag=profile0] run scoreboard players set e dynbclevel 0
 
 execute if entity @s[tag=profile1] run scoreboard players set 0 dynbclevel 0
 execute if entity @s[tag=profile1] run scoreboard players set - dynbclevel 0
@@ -29,6 +31,8 @@ execute if entity @s[tag=profile1] run scoreboard players set t dynbclevel 1
 execute if entity @s[tag=profile1] run scoreboard players set g dynbclevel 1
 execute if entity @s[tag=profile1] run scoreboard players set s dynbclevel 1
 execute if entity @s[tag=profile1] run scoreboard players set p dynbclevel 1
+execute if entity @s[tag=profile1] run scoreboard players set a dynbclevel 1
+execute if entity @s[tag=profile1] run scoreboard players set e dynbclevel 1
 
 execute if entity @s[tag=profile2] run scoreboard players set 0 dynbclevel 0
 execute if entity @s[tag=profile2] run scoreboard players set - dynbclevel 0
@@ -37,6 +41,8 @@ execute if entity @s[tag=profile2] run scoreboard players set t dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set g dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set s dynbclevel 1
 execute if entity @s[tag=profile2] run scoreboard players set p dynbclevel 2
+execute if entity @s[tag=profile2] run scoreboard players set a dynbclevel 1
+execute if entity @s[tag=profile2] run scoreboard players set e dynbclevel 1
 
 execute if entity @s[tag=profile3] run scoreboard players set 0 dynbclevel 0
 execute if entity @s[tag=profile3] run scoreboard players set - dynbclevel 0
@@ -45,6 +51,8 @@ execute if entity @s[tag=profile3] run scoreboard players set t dynbclevel 1
 execute if entity @s[tag=profile3] run scoreboard players set g dynbclevel 1
 execute if entity @s[tag=profile3] run scoreboard players set s dynbclevel 1
 execute if entity @s[tag=profile3] run scoreboard players set p dynbclevel 3
+execute if entity @s[tag=profile3] run scoreboard players set a dynbclevel 1
+execute if entity @s[tag=profile3] run scoreboard players set e dynbclevel 1
 
 #version check
 function dynamic_lights_by_creepermeyt:internal/common/versioncheck

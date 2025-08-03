@@ -36,7 +36,7 @@ tellraw @s ""
 
 
 tellraw @s ""
-tellraw @s {"text":"                      [ BACK TO MENU ]","bold":true,"click_event": {"action": "run_command", "command": "/function dynamic_lights_by_creepermeyt:config"}}
+tellraw @s {"text":"                      [ BACK TO MENU ]","bold":true,"click_event": {"action": "run_command", "command": "/function dynamic_lights_by_creepermeyt:config/config"}}
 tellraw @s ""
 
 playsound ui.button.click master @s

@@ -1,3 +1,4 @@
+scoreboard players reset @s dynbcmenus
 scoreboard players add g dynbclevel 1
 execute if score g dynbclevel matches 2 run scoreboard players set g dynbclevel 0
 execute if score p dynbclevel matches 0 if score g dynbclevel matches 1 run scoreboard players set p dynbclevel 1
