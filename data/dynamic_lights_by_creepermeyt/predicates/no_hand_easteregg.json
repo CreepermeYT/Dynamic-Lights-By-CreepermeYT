@@ -2,30 +2,34 @@
 {
     "condition": "minecraft:inverted",
     "term": {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "slots": {
-      "weapon.mainhand": {
-        "items": ["minecraft:dragon_egg"]
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+              "minecraft:dragon_egg"
+            ]
+          }
+        }
       }
     }
-  }
-}
-},
+  },
 {
     "condition": "minecraft:inverted",
     "term": {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "slots": {
-      "weapon.offhand": {
-        "items": ["minecraft:dragon_egg"]
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:dragon_egg"
+            ]
+          }
+        }
       }
     }
   }
-}
-}
 ]
 

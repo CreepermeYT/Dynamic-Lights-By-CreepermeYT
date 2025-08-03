@@ -1,1 +1,1 @@
-scoreboard players set @s dynbcmenus 6
+scoreboard players set @s dynbcmenus 8
