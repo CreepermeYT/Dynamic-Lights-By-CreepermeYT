@@ -4,9 +4,7 @@
 #if not delete
 #check if larger, replace with larger, remove secondary if necessary
 
-execute if entity @s[tag=dynbc.delete] unless score lvl dynbclevel = @s dynbclevel run scoreboard players set @s dynbclevel 0 
-execute if entity @s[tag=dynbc.delete] if score r dynbclevel matches 1 run tag @s add dynbc.secondary
-execute if entity @s[tag=dynbc.delete] run tag @s remove dynbc.delete
+execute if entity @s[tag=dynbc.delete] run function dynamic_lights_by_creepermeyt:internal/smart/compare_c2
 
 scoreboard players reset c dynbclevel
 
