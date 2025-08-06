@@ -1,2 +1,2 @@
-execute as @e[tag=dynbc.delete] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/delete
-execute as @e[tag=dynbc.update] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/create
+execute as @e[tag=dynbc.delete,limit=16383] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/delete
+execute as @e[tag=dynbc.update,limit=16383] at @s run function dynamic_lights_by_creepermeyt:internal/optimized/create
