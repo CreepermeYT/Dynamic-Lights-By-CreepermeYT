@@ -1,5 +1,5 @@
 ## this message will show up and work only if the MC version is below 1.17
-say Dynamic Lights by CreepermeYT v1.4.1 is designed for MC1.17 to MC1.21.10 ONLY!
+say Dynamic Lights by CreepermeYT v1.4.2 is designed for MC1.17 to MC1.21.11 ONLY!
 tellraw @a {"text":"-----------------------------------------------------","color":"dark_red"}
 tellraw @a {"text":"Details:","bold":true,"italic":true}
 tellraw @a ""
@@ -17,6 +17,6 @@ tellraw @a "                 -------------------------------"
 tellraw @a ""
 tellraw @a [{"text":"          ","color":"dark_red","bold":true},{"text":" ","bold":false},"< ",{"text":"INCOMPATIBLE MINECRAFT VERSION","color":"red"}," >"]
 tellraw @a ""
-tellraw @a ["  ",{"text": "        Compatible Versions: ","color":"green","bold":true},{"text":"[ 1.17 - 1.21.10 ]","color":"gray","bold":true}]
+tellraw @a ["  ",{"text": "        Compatible Versions: ","color":"green","bold":true},{"text":"[ 1.17 - 1.21.11 ]","color":"gray","bold":true}]
 tellraw @a ""
 tellraw @a {"text":"-----------------------------------------------------","color":"dark_red"}

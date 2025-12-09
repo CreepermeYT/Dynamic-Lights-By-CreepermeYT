@@ -1,11 +1,13 @@
 {
   "pack": {
-    "description": ["",{"text":"Dynamic Lights","color":"yellow","bold":true}," By ",{"text":"CreepermeYT","color":"white","bold":true}," v1.4.1"],
+    "description": ["",{"text":"Dynamic Lights","color":"yellow","bold":true}," By ",{"text":"CreepermeYT","color":"white","bold":true}," v1.4.2"],
     "pack_format": 15,
     "supported_formats": {
       "min_inclusive": 7,
       "max_inclusive": 100
-    }
+    },
+    "min_format": 7,
+    "max_format": 100
   },
   "overlays": {
     "entries": [

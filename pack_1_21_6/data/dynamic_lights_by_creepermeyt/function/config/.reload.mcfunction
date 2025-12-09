@@ -1,6 +1,6 @@
 execute if score - dynbclevel matches -1.. run tag @s add dynbc.show
 execute if entity @s[tag=!dynbc.show] run function dynamic_lights_by_creepermeyt:internal/load
-execute if entity @s[tag=!dynbc.show] run scoreboard players set @s dynbcmenus 10
+execute if entity @s[tag=!dynbc.show] run scoreboard players set @s dynbcmenus 9
 
 
 execute if entity @s[tag=dynbc.show] run function dynamic_lights_by_creepermeyt:config/presets
