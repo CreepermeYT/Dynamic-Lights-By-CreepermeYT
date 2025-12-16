@@ -13,7 +13,7 @@ execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @
 
 ## entities on fire - only if they are close to a player
 scoreboard players set lvl dynbclevel 15
-execute if score f dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:on_fire] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
+execute if score f dynbclevel matches 1 as @e[predicate=dynamic_lights_by_creepermeyt:on_fire] at @s if entity @a[distance=..48] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## max of 48 tnt - only if they are close to a player
 scoreboard players set lvl dynbclevel 15
@@ -21,31 +21,35 @@ execute if score t dynbclevel matches 1 as @e[type=tnt,sort=random,limit=48] unl
 
 ## glowing effect - only if they are close to a player
 scoreboard players set lvl dynbclevel 10
-execute if score g dynbclevel matches 1 at @e[predicate=dynamic_lights_by_creepermeyt:is_glowing] if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/dynamiclight
+execute if score g dynbclevel matches 1 as @e[predicate=dynamic_lights_by_creepermeyt:is_glowing] at @s if entity @a[distance=..48] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## glow squids :3 - only if they are close to a player
-execute unless score - dynbclevel matches -2 as @e[type=glow_squid,tag=!dynbc.glowsquid] run function dynamic_lights_by_creepermeyt:internal/util/asglowsquid
-execute if score s dynbclevel matches 1 as @e[type=glow_squid,tag=dynbc.glowsquid] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+scoreboard players set lvl dynbclevel 10
+execute if score s dynbclevel matches 1 as @e[type=glow_squid] at @s if entity @a[distance=..48] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
 ## allays :D - only if they are close to a player
-execute unless score - dynbclevel matches -2 as @e[type=#dynamic_lights_by_creepermeyt:allay,tag=!dynbc.allay] run tag @s add dynbc.allay
-execute if score a dynbclevel matches 1 as @e[type=#dynamic_lights_by_creepermeyt:allay,tag=dynbc.allay] at @s if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+scoreboard players set lvl dynbclevel 6
+execute if score a dynbclevel matches 1 as @e[type=#dynamic_lights_by_creepermeyt:allay] at @s if entity @a[distance=..48] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
-## enchanted armor - only if they are <24 blocks (spawn radius) from a player so that mob farms are not affected
+## enchanted armor (not items)- only if they are <24 blocks (spawn radius) from a player so that mob farms are not affected
 scoreboard players set lvl dynbclevel 4
 execute if score e dynbclevel matches 1 as @e[type=#dynamic_lights_by_creepermeyt:can_wear_armor,predicate=!dynamic_lights_by_creepermeyt:no_armor_enchantment] at @s if entity @a[distance=..24] anchored eyes positioned ^ ^ ^ run function dynamic_lights_by_creepermeyt:internal/dynamiclight
 
-## run as holders of items
+## PREPARE TAGS & SCOREBOARDS OF HOLDERS & ITEMS
+## run as HOLDERS of items - only if they are close to a player
 execute unless score - dynbclevel matches -2 as @e[type=#dynamic_lights_by_creepermeyt:can_hold_dynbc] at @s run function dynamic_lights_by_creepermeyt:internal/util/asholder
 
-## run as items
-execute if entity @e[type=item,tag=!dynbc.haslvl] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
+## run as DROPPED items
+execute if entity @e[type=item,tag=!dynbc.haslvl] at @e[type=item,tag=!dynbc.haslvl,sort=nearest,limit=1] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
 execute unless score - dynbclevel matches -2 as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/util/asitem
 kill @e[tag=dynbc.itemtagger]
-## dropped enchanted items, all dropped & held items
-execute if score e dynbclevel matches 1 as @e[tag=dynbc.enchantment] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
-execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
-execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/util/genforentity
+
+## Holders with ENCHANTED items & DROPPED Enchanted items
+execute if score e dynbclevel matches 1 as @e[tag=dynbc.enchantment] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
+## TORCHES ONLY - holders & items
+execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
+## ALL ITEMS - holders & items
+execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
 
 
 ## compatibility
@@ -64,8 +68,6 @@ function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.haslvl
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.torch
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.holder
-execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.glowsquid
-execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.allay
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.enchantment
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbcmenus
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run scoreboard objectives remove dynbclevel
