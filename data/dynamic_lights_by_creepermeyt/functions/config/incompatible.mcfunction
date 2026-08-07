@@ -1,5 +1,5 @@
 ## this message will show up and work only if the MC version is below 1.17
-say Dynamic Lights by CreepermeYT v1.4.3 is designed for MC1.17 to MC26.2 ONLY!
+say Dynamic Lights by CreepermeYT v1.4.4 is designed for MC1.17 to MC26.2 ONLY!
 tellraw @a {"text":"-----------------------------------------------------","color":"dark_red"}
 tellraw @a {"text":"Details:","bold":true,"italic":true}
 tellraw @a ""

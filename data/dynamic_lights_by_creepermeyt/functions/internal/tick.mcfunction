@@ -7,6 +7,9 @@ tag @e[type=marker,tag=dynbc] add dynbc.delete
 ## menus 1.21.6
 execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/openmenus
 
+## Check if OVERLOADED
+function dynamic_lights_by_creepermeyt:internal/util/overloadcheck
+
 ###########################################################
 ## Add Items, Entities, Effects, Compatibility to Marker ##
 ###########################################################
@@ -46,17 +49,15 @@ kill @e[tag=dynbc.itemtagger]
 
 ## Holders with ENCHANTED items & DROPPED Enchanted items
 execute if score e dynbclevel matches 1 as @e[tag=dynbc.enchantment] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
-## TORCHES ONLY - holders & items
+## TORCHES ONLY - holders & items < 96 blocks away
 execute if score - dynbclevel matches 1 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,tag=dynbc.torch] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
-## ALL ITEMS - holders & items
+## ALL ITEMS - holders & items < 96 blocks away
 execute if score - dynbclevel matches 0 as @e[tag=dynbc.haslvl,tag=!dynbc.enchantment,scores={dynbclevel=0..}] run function dynamic_lights_by_creepermeyt:internal/util/genforentitywithscore
 
 
 ## compatibility
-execute unless score - dynbclevel matches -2 run function dynamic_lights_by_creepermeyt:compatibility/compatibility
+execute unless score - dynbclevel matches -2 run function #dynamic_lights_by_creepermeyt:custom.compatibility
 
-## Check if OVERLOADED
-function dynamic_lights_by_creepermeyt:internal/util/overloadcheck
 
 ###################################
 ## Generation/Deletion of Lights ##
