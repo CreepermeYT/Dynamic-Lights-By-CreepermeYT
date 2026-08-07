@@ -9,6 +9,7 @@
 ###########################################
 # HOW TO GENERATE YOUR OWN DYNAMIC LIGHTS #
 ###########################################
+
 ## ADD THESE TWO COMMANDS (AND REMOVE THE '#'):
 #scoreboard players set lvl dynbclevel 15 <---- specifies the light level you want, replace the '15' with your light level
 #function dynamic_lights_by_creepermeyt:internal/dynamiclight  <---- generates a dynamic light at the position the function is executed
