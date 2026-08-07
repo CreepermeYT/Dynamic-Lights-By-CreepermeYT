@@ -31,6 +31,15 @@
         },
         "min_format": 80,
         "max_format": 120
+      },
+      {
+        "directory": "pack_26_2",
+        "formats": {
+          "min_inclusive": 105,
+          "max_inclusive": 120
+        },
+        "min_format": 105,
+        "max_format": 120
       }
     ]
   }
