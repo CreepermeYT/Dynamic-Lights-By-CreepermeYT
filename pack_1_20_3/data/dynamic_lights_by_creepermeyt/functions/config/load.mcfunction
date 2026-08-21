@@ -1,1 +1,1 @@
-tellraw @a [{"text":"-> ","bold":true},{"text":"LOADED","color":"green"},{"text":": ","color":"gray"},"","","",{"text":" < "},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >  ",{"text":" v1.4.4","color":"dark_gray","bold":false}]
+tellraw @a [{"text":"-> ","bold":true},{"text":"LOADED","color":"green"},{"text":": ","color":"gray"},"","","",{"text":" < "},{"text":"Dynamic Lights","color":"yellow"},{"text":" By ","color":"gray","bold":false},"CreepermeYT >  ",{"text":" v1.4.5","color":"dark_gray","bold":false}]

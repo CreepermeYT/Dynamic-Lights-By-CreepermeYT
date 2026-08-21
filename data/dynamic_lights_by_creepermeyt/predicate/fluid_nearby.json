@@ -1,0 +1,42 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 1,
+      "predicate": {
+        "fluid": {
+          "fluids": "#minecraft:lava"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "minecraft:light",
+              "state": {
+                "waterlogged": {
+                  "min": "false",
+                  "max": "false"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "fluid": {
+              "fluids": "#minecraft:water"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
