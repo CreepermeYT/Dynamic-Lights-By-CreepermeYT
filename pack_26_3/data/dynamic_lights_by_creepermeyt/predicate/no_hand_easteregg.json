@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:all_of",
+  "terms": [
+{
+    "type": "minecraft:inverted",
+    "term": {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+              "minecraft:dragon_egg"
+            ]
+          }
+        }
+      }
+    }
+  },
+{
+    "type": "minecraft:inverted",
+    "term": {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:dragon_egg"
+            ]
+          }
+        }
+      }
+    }
+  }
+]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:inverted",
+      "term": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "minecraft:entity_type": "#dynamic_lights_by_creepermeyt:cannot_be_on_fire"
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:flags": {
+          "is_on_fire": true
+        }
+      }
+    }
+  ]
+}
