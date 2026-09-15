@@ -4,4 +4,4 @@ tag @s remove dynbc.enchantment
 scoreboard players reset @s dynbclevel
 tag @s add dynbc.holder
 
-execute if entity @a[distance=..48] run function dynamic_lights_by_creepermeyt:internal/conditional/asholder_c4
+execute if entity @a[distance=..48] if entity @s[gamemode=!spectator] run function dynamic_lights_by_creepermeyt:internal/conditional/asholder_c4
