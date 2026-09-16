@@ -4,6 +4,8 @@ execute if score p dynbclevel matches 2 run tag @s add profile0
 execute if score p dynbclevel matches 3 run tag @s add profile0
 
 tag @s add dynbc.presetchange
+scoreboard players set k dynbclevel -2
+execute at @a run tag @e[type=item,distance=32..] remove dynbc.haslvl
 function dynamic_lights_by_creepermeyt:config/.uninstall
 tag @s remove dynbc.presetchange
 

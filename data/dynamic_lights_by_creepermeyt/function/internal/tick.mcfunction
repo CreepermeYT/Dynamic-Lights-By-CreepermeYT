@@ -1,6 +1,11 @@
 ## reschedule tick
 execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
 execute if score - dynbclevel matches -2 run schedule clear dynamic_lights_by_creepermeyt:internal/tick
+
+## check incomplete tick
+execute if score k dynbclevel matches -1 if function dynamic_lights_by_creepermeyt:internal/util/overloaded run return 0
+scoreboard players set k dynbclevel -1
+
 ## mark dynamic light markers for deletion
 tag @e[type=marker,tag=dynbc] add dynbc.delete
 
@@ -44,7 +49,7 @@ execute unless score - dynbclevel matches -2 as @e[type=#dynamic_lights_by_creep
 
 ## run as DROPPED items
 execute if entity @e[type=item,tag=!dynbc.haslvl] at @e[type=item,tag=!dynbc.haslvl,sort=nearest,limit=1] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
-execute unless score - dynbclevel matches -2 as @e[type=item,tag=!dynbc.haslvl] run function dynamic_lights_by_creepermeyt:internal/util/asitem
+execute unless score - dynbclevel matches -2 at @a as @e[type=item,tag=!dynbc.haslvl,tag=!dynbc.disabled,sort=nearest,limit=32] run function dynamic_lights_by_creepermeyt:internal/util/asitem
 kill @e[tag=dynbc.itemtagger]
 
 ## Holders with ENCHANTED items & DROPPED Enchanted items
@@ -64,8 +69,11 @@ execute unless score - dynbclevel matches -2 run function #dynamic_lights_by_cre
 ###################################
 function dynamic_lights_by_creepermeyt:internal/common/tickupdate
 
+## mark tick completed successfully
+scoreboard players set k dynbclevel -2
 
 ## complete uninstallation
+execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.disabled
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.haslvl
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.torch
 execute if score - dynbclevel matches -2 if entity @s[tag=!dynbc.presetchange] run tag @e remove dynbc.holder

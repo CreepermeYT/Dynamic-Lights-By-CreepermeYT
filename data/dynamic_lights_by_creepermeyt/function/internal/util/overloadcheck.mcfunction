@@ -1,4 +1,0 @@
-execute store result score dc dynbclevel run execute if entity @e[tag=dynbc]
-execute if score dc dynbclevel matches 16383.. run tellraw @a ["",{"text":"-----------------------------------------------------\n","color":"yellow"},{"text":"  < ","bold":true},{"text":"Dynamic Lights","color":"yellow","bold":true},{"text":" By ","color":"gray"},{"text":"CreepermeYT >","bold":true}," is ",{"text":"OVERLOADED\n","bold":true,"color":"red"},{"text":"\n                   [ ","bold":true},{"score":{"name":"dc","objective":"dynbclevel"}},{"text":" / ","bold":true},"16383",{"text":" ] ","bold":true},{"text":"Dynamic Lights\n","color":"yellow"},{"text":"\n           Dynamic Lights might stop working at any point","color":"dark_red","italic":true},{"text":"\n-----------------------------------------------------","color":"yellow"}]
-# attempt to clear dynamic lights
-execute if score dc dynbclevel matches 16383.. run function dynamic_lights_by_creepermeyt:internal/common/tickupdate
