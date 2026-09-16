@@ -57,7 +57,6 @@ execute if entity @s[tag=profile3] run scoreboard players set e dynbclevel 1
 #version check
 function dynamic_lights_by_creepermeyt:internal/common/versioncheck
 
-function dynamic_lights_by_creepermeyt:internal/tick
 function dynamic_lights_by_creepermeyt:config/presets
 tellraw @s {"text":"-- Previous Action: ------------------------------------","color":"yellow"}
 execute if entity @s[tag=profile0] run tellraw @s [{"text":"-> ","color":"white","bold":true},{"text":"Switched","color":"yellow"}," to ",{"text":"[FASTEST] ","color":"gray"},{"text":"Preset","color":"gold"}]
@@ -70,3 +69,5 @@ tag @s remove profile0
 tag @s remove profile1
 tag @s remove profile2
 tag @s remove profile3
+
+function dynamic_lights_by_creepermeyt:internal/tick
