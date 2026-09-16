@@ -6,5 +6,3 @@ execute at @a as @e[type=item,tag=dynbc.haslvl,tag=!dynbc.disabled,sort=random,d
 tag @e[type=item,tag=dynbc.haslvl,tag=!dynbc.disabled,sort=random,limit=64] add dynbc.disabled 
 tag @e[tag=dynbc.haslvl] remove dynbc.haslvl
 function dynamic_lights_by_creepermeyt:internal/common/tickupdate
-scoreboard players set k dynbclevel -2
-return 1

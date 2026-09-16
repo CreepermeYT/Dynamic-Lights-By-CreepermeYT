@@ -1,16 +1,7 @@
-## reschedule tick
-execute unless score - dynbclevel matches -2 run schedule function dynamic_lights_by_creepermeyt:internal/tick 1t
-execute if score - dynbclevel matches -2 run schedule clear dynamic_lights_by_creepermeyt:internal/tick
-
-## check incomplete tick
-execute if score k dynbclevel matches -1 if function dynamic_lights_by_creepermeyt:internal/util/overloaded run return 0
 scoreboard players set k dynbclevel -1
 
 ## mark dynamic light markers for deletion
 tag @e[type=marker,tag=dynbc] add dynbc.delete
-
-## menus 1.21.6
-execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @s if function dynamic_lights_by_creepermeyt:config/openmenus run return 1
 
 ## Check if OVERLOADED
 function dynamic_lights_by_creepermeyt:internal/util/overloadcheck

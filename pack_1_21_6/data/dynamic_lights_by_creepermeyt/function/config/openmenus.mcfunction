@@ -19,4 +19,4 @@ execute if score @s dynbcmenus matches 11 run function dynamic_lights_by_creeper
 scoreboard players reset @s dynbcmenus
 scoreboard players enable @s dynbcmenus
 
-return 1
+scoreboard players set k dynbclevel -1
