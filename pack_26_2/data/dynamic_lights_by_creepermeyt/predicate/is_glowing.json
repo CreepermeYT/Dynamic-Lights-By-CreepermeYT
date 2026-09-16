@@ -5,7 +5,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "#dynamic_lights_by_creepermeyt:cannot_be_on_fire"
+        "entity_type": "#dynamic_lights_by_creepermeyt:cannot_be_on_fire"
       }
     }
   },

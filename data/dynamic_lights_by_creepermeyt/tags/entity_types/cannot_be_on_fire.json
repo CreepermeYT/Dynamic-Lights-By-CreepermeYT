@@ -1,5 +1,6 @@
 {
   "values": [
+    "minecraft:item",
     "minecraft:item_frame",
     "minecraft:marker",
     {"id":"minecraft:interaction","required":false},
