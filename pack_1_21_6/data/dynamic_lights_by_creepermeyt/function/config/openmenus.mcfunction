@@ -1,6 +1,8 @@
 # 1 -> execute if score @s dynbcmenus matches 1 run function dynamic_lights_by_creepermeyt:config/.toggle_fire
 # 1 -> trigger dynbcmenus set 1
 
+scoreboard players set k dynbclevel -2
+execute if score @s dynbcmenus matches 5 at @a run tag @e[type=item,distance=32..] remove dynbc.haslvl
 execute if score @s dynbcmenus matches 1 run function dynamic_lights_by_creepermeyt:config/.toggle_fire
 execute if score @s dynbcmenus matches 2 run function dynamic_lights_by_creepermeyt:config/.toggle_tnt
 execute if score @s dynbcmenus matches 3 run function dynamic_lights_by_creepermeyt:config/.toggle_glowsquid
@@ -16,3 +18,5 @@ execute if score @s dynbcmenus matches 11 run function dynamic_lights_by_creeper
 
 scoreboard players reset @s dynbcmenus
 scoreboard players enable @s dynbcmenus
+
+return 1

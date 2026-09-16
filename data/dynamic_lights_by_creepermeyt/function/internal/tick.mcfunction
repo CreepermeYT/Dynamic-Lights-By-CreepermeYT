@@ -10,7 +10,7 @@ scoreboard players set k dynbclevel -1
 tag @e[type=marker,tag=dynbc] add dynbc.delete
 
 ## menus 1.21.6
-execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @s run function dynamic_lights_by_creepermeyt:config/openmenus
+execute unless score - dynbclevel matches -2 as @a[scores={dynbcmenus=1..}] at @s if function dynamic_lights_by_creepermeyt:config/openmenus run return 1
 
 ## Check if OVERLOADED
 function dynamic_lights_by_creepermeyt:internal/util/overloadcheck
@@ -49,7 +49,7 @@ execute unless score - dynbclevel matches -2 as @e[type=#dynamic_lights_by_creep
 
 ## run as DROPPED items
 execute if entity @e[type=item,tag=!dynbc.haslvl] at @e[type=item,tag=!dynbc.haslvl,sort=nearest,limit=1] run summon minecraft:armor_stand ~ -128 ~ {Tags:[dynbc.itemtagger]}
-execute unless score - dynbclevel matches -2 at @a as @e[type=item,tag=!dynbc.haslvl,tag=!dynbc.disabled,sort=nearest,limit=32] run function dynamic_lights_by_creepermeyt:internal/util/asitem
+execute unless score - dynbclevel matches -2 at @a as @e[type=item,tag=!dynbc.haslvl,tag=!dynbc.disabled,sort=nearest,limit=48] run function dynamic_lights_by_creepermeyt:internal/util/asitem
 kill @e[tag=dynbc.itemtagger]
 
 ## Holders with ENCHANTED items & DROPPED Enchanted items
